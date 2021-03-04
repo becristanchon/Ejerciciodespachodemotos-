@@ -1,0 +1,97 @@
+<mat-sidenav-container class="sidenav-container" >
+    <mat-sidenav #drawer class="sidenav" fixedInViewport="true"
+    [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
+    [mode]="(isHandset$ | async) ? 'over' : 'side'"
+    [opened]="!(isHandset$ | async)">
+  <mat-toolbar>INFORMACION</mat-toolbar>
+  <mat-nav-list>
+      <a mat-list-item href="/PListadoLadrones"><mat-icon> list_alt</mat-icon> LISTADO DE LADRONES</a>
+      <a mat-list-item href="/clonadores"><mat-icon>supervised_user_circle</mat-icon> CLONADORES </a>
+      <a mat-list-item href="/PGultar"><mat-icon>security</mat-icon> GULTAMINATOR</a>
+      <a mat-list-item href="/boots"><mat-icon>android</mat-icon> REPORTAR  BOTS </a>
+  </mat-nav-list>
+  </mat-sidenav>
+    <mat-sidenav-content>
+        <mat-toolbar color="accent">
+            <button
+              type="button"
+              aria-label="Toggle sidenav"
+              mat-icon-button
+              (click)="drawer.toggle()"
+              *ngIf="isHandset$ | async">
+              <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+            </button>
+            <span> INFUS</span>
+           
+          </mat-toolbar>
+
+          <!--contenido pagina-->
+          
+      <mat-card matSort style="  background-image: url('./assets/Fondos/clonesfondo.jpg');  background-size:100% auto;">
+     <div style=" background: rgba(0, 0, 0, 0.7);">
+  
+        <h1> CLONADORES </h1>
+        <P>EL ROBO MEDIANTE CLONACION CONCISTE EN LA SUPLANTACION DE UN VENDEDOR "SERIO" O "PERSONAS RECONOCIDA" EN INTERCAMBIOS   CON EL FIN DE GENERAR CONFIANZA A LA VICTIMA: <br>
+       ⚠️ 🚫 Cuidado con estos perfiles de CLONADORES de Perfiles de INTERMEDIARIOS 🚫⚠️
+  
+       <span>🐁🐭 MIGUEL PAZ PIZARRO ‼️</span><br>
+       <span>🐁🐭 IGNACIO ALBORNOZ ROJAS ‼️</span><br>
+       <span>🐁🐭 EMILIANO JULIAN CELIA ‼️</span><br>
+       <span>🐁🐭 ‎PIGHETTI JOEL PATRICIO ‼️ </span><br>
+       <span>🐁🐭 IGNACIO ALBORNOZ ROJAS ‼️</span><br>
+       <span>🐁🐭 ‎PIGHETTI JOEL PATRICIO ‼️</span><br>
+       <span>🐁🐭 VICTOR MANUEL SEPULVEDA ‼️</span><br>
+       <span>🐁🐭 JOSE MANUEL ‼️</span><br>
+       <span>🐁🐭 SEBASTIÁN SUÁREZ PÁEZ ‼️</span><br>
+       <span>🐁🐭 ANDRÉS FELIPE SANCHEZ ARTEAGA ‼️</span><br>
+  
+  ⚠️ OJO 👀 SIEMPRE CONFIRMEN NOMBRE Y LOGO DEL GREMIO Y QUE EL PERFIL DE FACEBOOK QUE METAN EN EL GRUPO DEL NEGOCIO SEA EL PERFIL REAL, NO SOLO MÍO SINO DE CUALQUIER OTRO INTERMEDIARIO.
+      </P>
+   <h2>TE PEDIMOS QUE SEAS CUIDADOSO  EN TUS INTERCAMBIOS  Y VERIFICA TANTO GREMIO,NOMBRE,PERFIL DE FACEBOOK, NUMERO DE AMIGOS,APODOS ETC...</h2>
+    </div>
+  
+    </mat-card>
+    <mat-tab-group>
+      <mat-tab label="CLONACION EJEMPLO 1 "> 
+        <mat-card class="example-card">
+        <mat-card-header>
+          <div mat-card-avatar class="example-header-image"></div>
+          <mat-card-title> Caso : Hit-zurc </mat-card-title>
+          <mat-card-subtitle>Perfil oficial :  <button mat-button class="buttonperfil"><a href="https://www.facebook.com/elex.hasbumsuarez?fref=gs&__tn__=%2CdK-R-R&eid=ARB6PAf6HSwXnjyMYZCoXSocKJQQAvsq_JMsD95xU0kX_kFDuwggvO4jD9OwhV4oHzVDkczp8a59r0k7&dti=369800773572228&hc_location=group"> Hit-zurc </a></button></mat-card-subtitle>
+        </mat-card-header>
+        <img mat-card-image src="./assets/Fondos/clones.jpg" alt="Photo of a Shiba Inu">
+        <mat-card-content>
+         
+           <P>
+              Son los que andan clonando faces de INTERMEDIARIOS y Personaejes,
+               Acá les muestro la DIFERENCIA de mi personaje para intermediarios en 1.29 Eratz ( Namiine )
+                con CLONES como ( Naminee o Naniime ), Al igual con mi gato con clones como
+                 ( HIt-zurk o HIt-zurc ) Ambos con (L en vez de I) cuando es Hit-zurc. 
+                 Tengan cuidado que están haciendo clones muy iguales tanto con el personaje y el Gremio.
+          </P>
+        </mat-card-content>
+      </mat-card> </mat-tab>
+      <mat-tab label="CLONACION EJEMPLO 2">
+          <mat-card class="example-card">
+              <mat-card-header>
+                <div mat-card-avatar class="example-header-image"></div>
+                <mat-card-title> Caso : Hit-zurc </mat-card-title>
+                <mat-card-subtitle>Perfil oficial :  <button mat-button class="buttonperfil"><a href="https://www.facebook.com/elex.hasbumsuarez?fref=gs&__tn__=%2CdK-R-R&eid=ARB6PAf6HSwXnjyMYZCoXSocKJQQAvsq_JMsD95xU0kX_kFDuwggvO4jD9OwhV4oHzVDkczp8a59r0k7&dti=369800773572228&hc_location=group"> Hit-zurc </a></button></mat-card-subtitle>
+              </mat-card-header>
+              <img mat-card-image src="./assets/Fondos/CLON2.PNG" alt="CLONES Hit-zurc">
+              <mat-card-content>
+               
+                 <P>
+                    Otro clon de muchos, este salió hoy.
+                    Pide cosas y se hace pasar como intermediario.
+                    Hay otros como:
+                    - Naniime - Namiinee - Mamiine - Maniine
+                    ⚠️!Tengamos cuidado!🚫
+                  </P>
+              </mat-card-content>
+            </mat-card> 
+      </mat-tab>
+    </mat-tab-group>
+    <app-footer></app-footer>
+    </mat-sidenav-content>
+  </mat-sidenav-container>

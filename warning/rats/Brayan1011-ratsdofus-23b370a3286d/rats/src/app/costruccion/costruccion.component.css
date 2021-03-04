@@ -1,0 +1,42 @@
+.form-control.login-user {
+    border: 0 solid #fff !important;
+  }
+  .btn-social{
+    position: relative;
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    color: #fff;
+    border-color: rgba(0,0,0,0.2);
+  }
+  
+  .btn-facebook{
+    background: #3b5998;
+  }
+  .btn-inicio{
+    background: #97d669;
+  }
+  
+
+  .padre {
+
+    height: auto;
+    /*IMPORTANTE*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .hijo {
+    
+    width: auto;
+  }
+  .example-card {
+    max-width: AUTO;
+  }
+  
+  .example-header-image {
+    background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
+    background-size: cover;
+  }

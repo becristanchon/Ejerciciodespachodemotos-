@@ -1,0 +1,31 @@
+<mat-sidenav-container class="sidenav-container" >
+ 
+  <mat-sidenav-content>
+    <mat-toolbar color="primary">
+      <button
+        type="button"
+        aria-label="Toggle sidenav"
+        mat-icon-button
+        (click)="drawer.toggle()"
+        *ngIf="isHandset$ | async">
+        <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+      </button>
+      <span> LADRONES ANKAMA</span>
+     
+    </mat-toolbar>
+  
+    <mat-card>
+      <P>EL OBJETIVO DE ESTA PAGINA ES FACILITAR LA BUSQUEDA A TODA LA COMUNIDAD DE ANKAMA GAMES DE LADRONES REPORTADOS, 
+      MEDIANTE UN BUSCADOR AGIL  EL CUAL TE PERMITE BUSCAR  POR : <br>
+       <span> - Nombre</span><br>
+       <span> - Perfil de facebook</span><br>
+       <span> - Numero Wapp </span><br>
+       <span> - Servidor  </span><br>
+       <span> - Nombre Personaje  </span><br>
+       <span> - modus operandi </span><br>
+    </P>
+    ESTA LISTA ESTA SIENDO ACTUALIZADA CONSTANTEMENTE PARA TU SEGURIDAD SI TIENES ALGUNA PERSONA  PARA REPORTAR ESCRIBENOS AL CORREO ratsdofus@gmail.com  RECUERDA ENVIAR EVIDENCIA.
+    </mat-card>
+    <app-consultalistado></app-consultalistado>
+  </mat-sidenav-content>
+</mat-sidenav-container>

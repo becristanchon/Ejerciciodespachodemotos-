@@ -1,0 +1,37 @@
+  
+  <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+  
+  <mat-form-field color="warn">
+      <input matInput required value="Escriba su busqueda aqui" (keyup)="applyFilter($event.target.value)" placeholder="BUSCADOR" class="inputs">
+      <mat-icon matSuffix> search</mat-icon>
+    </mat-form-field>
+    <div class="mat-elevation-z8">  
+    <table mat-table [dataSource]="dataSource" matSort >
+      <!-- Progress Column -->
+
+      <ng-container matColumnDef="posmapa">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> cordenada de combate </th>
+        <td mat-cell *matCellDef="let row"> {{row.posmapa}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="fecha">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header>Fecha de combate</th>
+        <td mat-cell *matCellDef="let row"> {{row.updatedAt.toDate()}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="transmision">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> transmision </th>
+        <td mat-cell *matCellDef="let row">  <a class="btn" style="background-color: white"  href="{{row.transmision}}"><i class="fa fa-facebook">acebook</i></a> </td>
+      </ng-container>
+      
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;">
+      </tr>
+    </table>
+    <mat-paginator [pageSizeOptions]="[5, 10, 20]" showFirstLastButtons></mat-paginator>
+    </div>
+  
+
+
+
+

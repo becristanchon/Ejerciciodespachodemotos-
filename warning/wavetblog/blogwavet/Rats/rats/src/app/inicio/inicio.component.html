@@ -1,0 +1,37 @@
+<form (ngSubmit)="onGuardarpersona(formNew)" #formNew="ngForm" class="col s6">
+  
+
+    <div class="input-field col s6">
+      <input [(ngModel)]="persona.nombre" #nombre="ngModel" type="text" name="nombre" id="nombre" placeholder="nombre"
+        minlength="10" maxlength="200" required>
+      <label>nombre completo</label>
+    </div>
+    <div class="input-field col s6">
+      <input [(ngModel)]="persona.facebook" #facebook="ngModel" type="text" name="facebook" id="facebook" placeholder="facebook"
+        minlength="10" maxlength="200" required>
+      <label>facebook</label>
+    </div>
+    <div class="input-field col s6">
+      <input [(ngModel)]="persona.nombrePersonaje" #nombrePersonaje="ngModel" type="text" name="nombrePersonaje" id="nombrePersonaje" placeholder="nombrePersonaje"
+        minlength="10" maxlength="200" required>
+      <label>nombre Personaje</label>
+    </div>
+    <div class="input-field col s6">
+      <input [(ngModel)]="persona.servidor" #servidor="ngModel" type="text" name="servidor" id="servidor" placeholder="servidor"
+        minlength="10" maxlength="200" required>
+      <label>servidor</label>
+    </div>
+    <div class="input-field col s6">
+      <input [(ngModel)]="persona.modus" #modus="ngModel" type="text" name="modus" id="modus" placeholder="modus"
+        minlength="10" maxlength="200" required>
+      <label>modus operandi</label>
+    </div>
+    <div class="input-field col s6">
+      <input [(ngModel)]="persona.wapp" #wapp="ngModel" type="text" name="wapp" id="wapp" placeholder="wapp"
+        minlength="10" maxlength="200" required>
+      <label>Numero WhatsApp</label>
+    </div>
+    <button type="submit" class="btn waves-effect waves-light orange right">Guardar
+      <i class="material-icons">add_circle</i>
+    </button>
+</form>

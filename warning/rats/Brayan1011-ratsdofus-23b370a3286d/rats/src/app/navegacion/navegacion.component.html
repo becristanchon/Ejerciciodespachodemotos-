@@ -1,0 +1,52 @@
+<mat-sidenav-container class="sidenav-container" >
+  <mat-sidenav #drawer class="sidenav" fixedInViewport="true"
+  [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
+  [mode]="(isHandset$ | async) ? 'over' : 'side'"
+  [opened]="!(isHandset$ | async)">
+<mat-toolbar>INFORMACION</mat-toolbar>
+<mat-nav-list>
+  <a mat-list-item href="/PListadoLadrones"><mat-icon> list_alt</mat-icon> LISTADO DE LADRONES</a>
+  <a mat-list-item href="/clonadores"><mat-icon>supervised_user_circle</mat-icon> CLONADORES </a>
+  <a mat-list-item href="/boots"><mat-icon>android</mat-icon> REPORTAR  BOOTS </a>
+  <a mat-list-item href="/PGultar"><mat-icon>security</mat-icon> GULTAMINATOR</a>
+</mat-nav-list>
+</mat-sidenav>
+  <mat-sidenav-content>
+    <mat-toolbar color="accent">
+      <button
+        type="button"
+        aria-label="Toggle sidenav"
+        mat-icon-button
+        (click)="drawer.toggle()"
+        *ngIf="isHandset$ | async">
+        <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+      </button>
+      <span> INFUS</span>
+      
+     <button class="btn btn-block btn-social btn-facebook" (click)="onLogout()">
+        <span class="fa fa-facebook"></span>
+        Logout 
+      </button>
+     
+    </mat-toolbar>
+  
+    <mat-card matSort style="  background-image: url('./assets/Fondos/418962.jpg');  background-size:50% auto;">
+   <div style=" background: rgba(0, 0, 0, 0.6);">
+
+      <h1> LISTADO DE LADRONES EN INTERCAMBIOS</h1>
+      <P>EL OBJETIVO DE ESTA PAGINA ES FACILITAR LA BUSQUEDA A TODA LA COMUNIDAD DE ANKAMA GAMES DE LADRONES REPORTADOS, 
+      MEDIANTE UN BUSCADOR AGIL  EL CUAL TE PERMITE BUSCAR  POR : <br>
+       <span> - Nombre</span><br>
+       <span> - Perfil de facebook</span><br>
+       <span> - Numero Wapp </span><br>
+       <span> - Servidor  </span><br>
+       <span> - Nombre Personaje  </span><br>
+       <span> - modus operandi </span><br>
+    </P>
+    ESTA LISTA ESTA SIENDO ACTUALIZADA CONSTANTEMENTE PARA TU SEGURIDAD SI TIENES ALGUNA PERSONA  PARA REPORTAR ESCRIBENOS AL CORREO ratsdofus@gmail.com  RECUERDA ENVIAR EVIDENCIA.  
+  </div>
+  </mat-card>
+    <app-consultalistado></app-consultalistado>
+    <app-footer></app-footer>
+  </mat-sidenav-content>
+</mat-sidenav-container>
